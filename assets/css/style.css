@@ -8635,10 +8635,24 @@ input[type="radio"] {
 }
 
 /*# sourceMappingURL=style.css.map */
-
+.lan-blinking-video {
+  width: 37vw;
+  height: 21vw;
+}
 @media screen and (max-width: 426px) {
   .homescreen-video {
     width: 180% !important;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    display: none !important;
+  }
+  .lan-blinking-video {
+    width: 93vw;
+    height: 64vw;
+  }
+  .fix-mobile-list {
+    display: grid !important;
   }
 }
 
