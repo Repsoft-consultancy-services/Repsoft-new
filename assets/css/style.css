@@ -8654,6 +8654,15 @@ input[type="radio"] {
   .fix-mobile-list {
     display: grid !important;
   }
+  .award-logo {
+    margin: auto !important;
+    width: 50vw !important;
+    height: 25vw !important;
+  }
+  .award-logo2 {
+    margin: auto !important;
+    height: 25vw !important;
+  }
 }
 
 @media screen and (max-width: 356px) {
