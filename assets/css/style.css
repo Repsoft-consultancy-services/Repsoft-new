@@ -8663,6 +8663,13 @@ input[type="radio"] {
     margin: auto !important;
     height: 25vw !important;
   }
+  .first-section-mob {
+    padding-top: 0 !important;
+  }
+  .logo-dark {
+    width: 50vw !important;
+    padding-top: 1vw !important;
+  }
 }
 
 @media screen and (max-width: 356px) {
