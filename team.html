@@ -278,7 +278,9 @@
               </div>
               <nav>
                 <ol class="breadcrumb mb-0">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Home</a>
+                  </li>
                   <li class="breadcrumb-item">
                     <a href="about-us.html">Company</a>
                   </li>
@@ -581,6 +583,7 @@
                 <div class="footer-widget__content">
                   <img
                     src="assets/images/logo/logo-dark.png"
+                    class="footer-logo-mob"
                     alt="logo"
                     class="mb-30"
                   />
@@ -595,8 +598,8 @@
                 <div class="footer-widget__content">
                   <nav>
                     <ul class="list-unstyled">
-                      <li><a href="about-us.html">About Us</a></li>
-                      <li><a href="leadership-team.html">Meet Our Team</a></li>
+                      <li><a href="why-us.html">About Us</a></li>
+                      <li><a href="team.html">Meet Our Team</a></li>
                       <li><a href="blog.html">News & Media</a></li>
                       <li><a href="contact-us.html">Contacts</a></li>
                     </ul>
@@ -612,7 +615,9 @@
                 <div class="footer-widget__content">
                   <nav>
                     <ul class="list-unstyled">
-                      <li><a href="services.html">Software Development</a></li>
+                      <li>
+                        <a href="services.html">Software Development</a>
+                      </li>
                       <li><a href="services.html">Game Development</a></li>
                       <li><a href="services.html">UI/UX Design</a></li>
                       <li><a href="services.html">Testing and Q/A</a></li>
@@ -643,36 +648,7 @@
               <!-- </div> -->
 
               <!-- /.col-lg-2 -->
-              <div class="col-sm-6 col-md-6 col-lg-3 footer-widget">
-                <h6 class="footer-widget__title">Newsletter</h6>
-                <div class="footer-widget__content">
-                  <form class="footer-form">
-                    <div class="form-group mb-20">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Your Email Address"
-                      />
-                      <button type="submit" class="footer-form__submit">
-                        <i class="icon-arrow-right"></i>
-                      </button>
-                    </div>
-                    <div
-                      class="custom-control custom-checkbox d-flex align-items-center mb-20"
-                    >
-                      <input
-                        type="checkbox"
-                        class="custom-control-input"
-                        id="terms"
-                      />
-                      <label class="custom-control-label" for="terms"
-                        >I accept the privacy and terms.</label
-                      >
-                    </div>
-                  </form>
-                </div>
-                <!-- /.footer-widget__content -->
-              </div>
+
               <!-- /.col-lg-3 -->
             </div>
             <!-- /.row -->
@@ -690,6 +666,8 @@
                     Rights Reserved.
                   </span>
                 </div>
+                <a href="termsandconditions.html">Terms & Conditions</a> |
+                <a href="privacypolicy.html">Privacy Policy</a>
               </div>
               <!-- /.col-lg-6 -->
               <div class="col-sm-12 col-md-2 col-lg-2 text-center">
@@ -847,9 +825,51 @@
       <!-- /.login-popup -->
     </div>
     <!-- /.wrapper -->
+    <div id="fb-root"></div>
 
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "108973034992224");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v16.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y3GK2LPM4G"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-Y3GK2LPM4G");
+    </script>
   </body>
 </html>

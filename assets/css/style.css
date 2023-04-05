@@ -8670,6 +8670,9 @@ input[type="radio"] {
     width: 50vw !important;
     padding-top: 1vw !important;
   }
+  .footer-logo-mob {
+    width: 40vw !important;
+  }
 }
 
 @media screen and (max-width: 356px) {
