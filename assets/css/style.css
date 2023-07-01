@@ -5465,10 +5465,11 @@ input[type="radio"] {
   position: relative;
   z-index: 2;
   font-family: "Barlow", sans-serif;
-  font-size: 29px;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 1.3;
   color: #0e2b3d;
   margin-bottom: 30px;
+  height: 180px;
 }
 
 .testimonial__meta-title {
@@ -5661,13 +5662,19 @@ input[type="radio"] {
 @media (max-width: 992px) {
   .testimonial__desc {
     font-size: 17px;
+    height: 240px;
   }
 
   .testimonial__meta-title {
     font-size: 15px;
   }
 }
-
+@media (max-width: 375px) {
+  .testimonial__desc {
+    font-size: 17px;
+    height: 330px;
+  }
+}
 /* Mobile Phones and tablets */
 @media (min-width: 320px) and (max-width: 575px) {
   .testimonial-box .testimonial__panel {
@@ -7165,6 +7172,12 @@ input[type="radio"] {
   .about-layout4 .video__btn-wrapper {
     padding: 15px;
   }
+  .testimonial__meta {
+    left: 0px !important;
+  }
+  .slider-nav {
+    margin-top: 50px !important;
+  }
 }
 
 /*-----------------------
@@ -8639,6 +8652,14 @@ input[type="radio"] {
   width: 37vw;
   height: 21vw;
 }
+@media screen and (max-width: 1024px) {
+  .fix-mobile-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+}
 @media screen and (max-width: 426px) {
   .homescreen-video {
     width: 180% !important;
@@ -8650,9 +8671,6 @@ input[type="radio"] {
   .lan-blinking-video {
     width: 93vw;
     height: 64vw;
-  }
-  .fix-mobile-list {
-    display: grid !important;
   }
   .award-logo {
     margin: auto !important;
