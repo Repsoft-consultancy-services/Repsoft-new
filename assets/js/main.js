@@ -23,28 +23,28 @@
      
  ----------------------------*/
 
-$(function () {
+$(function() {
   "use strict";
 
   // Global variables
   var $win = $(window);
 
   /*==========  Pre Loading   ==========*/
-  setTimeout(function () {
+  setTimeout(function() {
     $(".preloader").remove();
   }, 2000);
 
   /*==========   Mobile Menu   ==========*/
   var $navToggler = $(".navbar-toggler");
-  $navToggler.on("click", function () {
+  $navToggler.on("click", function() {
     $(this).toggleClass("actived");
   });
-  $navToggler.on("click", function () {
+  $navToggler.on("click", function() {
     $(".navbar-collapse").toggleClass("menu-opened");
   });
 
   /*==========   Sticky Navbar   ==========*/
-  $win.on("scroll", function () {
+  $win.on("scroll", function() {
     if ($win.width() >= 992) {
       var $stickyNavbar = $(".sticky-navbar"),
         $secondaryNavbar = $(".secondary-nav");
@@ -63,51 +63,51 @@ $(function () {
     }
   });
   // Scroll To Section when Clicking on The Link
-  $(".secondary-nav-internal-navigation .nav__link").on("click", function (e) {
+  $(".secondary-nav-internal-navigation .nav__link").on("click", function(e) {
     e.preventDefault();
     $("html, body").animate(
       {
         scrollTop: $("#" + $(this).data("scroll")).offset().top - 140,
       },
-      1000
+      1000,
     );
   });
 
   // Add  active class when The Scroll Reaching the Section
-  $(window).on("scroll", function () {
-    $("section").each(function () {
+  $(window).on("scroll", function() {
+    $("section").each(function() {
       if ($(window).scrollTop() > $(this).offset().top - 141) {
         var sectionID = $(this).attr("id");
         $(".secondary-nav-internal-navigation .nav__link").removeClass(
-          "active"
+          "active",
         );
         $(
           '.secondary-nav-internal-navigation .nav__link[data-scroll="' +
-            sectionID +
-            '"]'
+          sectionID +
+          '"]',
         ).addClass("active");
       }
     });
   });
 
   /*==========   Scroll Top Button   ==========*/
-  $("#scrollTopBtn").on("click", function () {
+  $("#scrollTopBtn").on("click", function() {
     $("html, body").animate(
       {
         scrollTop: 0,
       },
-      500
+      500,
     );
   });
 
   /*==========   Close Topbar   ==========*/
-  $(".topbar__close").on("click", function (e) {
+  $(".topbar__close").on("click", function(e) {
     e.preventDefault();
     $(this).closest(".topbar").fadeOut();
   });
 
   /*==========   Set Background-img to section   ==========*/
-  $(".bg-img").each(function () {
+  $(".bg-img").each(function() {
     var imgSrc = $(this).children("img").attr("src");
     $(this)
       .parent()
@@ -125,31 +125,31 @@ $(function () {
   });
 
   /*==========   Add active class to accordions   ==========*/
-  $(".accordion__header").on("click", function () {
+  $(".accordion__header").on("click", function() {
     $(this).parent(".accordion-item").toggleClass("opened");
     $(this).parent(".accordion-item").siblings().removeClass("opened");
   });
-  $(".accordion__title").on("click", function (e) {
+  $(".accordion__title").on("click", function(e) {
     e.preventDefault();
   });
 
   /*==========   Progress bars  ==========*/
   if ($(".animated-Progressbars").length > 0) {
-    $(window).on("scroll", function () {
+    $(window).on("scroll", function() {
       var progressSectionOffset =
-          $(".animated-Progressbars").offset().top - 130,
+        $(".animated-Progressbars").offset().top - 130,
         progressSectionHight = $(this).outerHeight(),
         winScrollTop = $(window).scrollTop();
       if (
         winScrollTop > progressSectionOffset - 1 &&
         winScrollTop < progressSectionOffset + progressSectionHight - 1
       ) {
-        $(".progress-bar").each(function () {
+        $(".progress-bar").each(function() {
           $(this).width($(this).attr("aria-valuenow") + "%");
         });
-        $(".progress__percentage").each(function () {
+        $(".progress__percentage").each(function() {
           $(this).text(
-            $(this).parent(".progress-bar").attr("aria-valuenow") + "%"
+            $(this).parent(".progress-bar").attr("aria-valuenow") + "%",
           );
         });
       }
@@ -159,14 +159,14 @@ $(function () {
   /*==========  Open and Close Popup   ==========*/
   // open Popup
   function openPopup(popupTriggerBtn, popup, addedClass, removedClass) {
-    $(popupTriggerBtn).on("click", function (e) {
+    $(popupTriggerBtn).on("click", function(e) {
       e.preventDefault();
       $(popup).toggleClass(addedClass, removedClass).removeClass(removedClass);
     });
   }
   // Close Popup
   function closePopup(closeBtn, popup, addedClass, removedClass) {
-    $(closeBtn).on("click", function () {
+    $(closeBtn).on("click", function() {
       $(popup).removeClass(addedClass).addClass(removedClass);
     });
   }
@@ -176,9 +176,9 @@ $(function () {
     stopPropogationElement,
     popupTriggerBtn,
     removedClass,
-    addedClass
+    addedClass,
   ) {
-    $(document).on("mouseup", function (e) {
+    $(document).on("mouseup", function(e) {
       if (
         !$(stopPropogationElement).is(e.target) &&
         !$(popupTriggerBtn).is(e.target) &&
@@ -199,7 +199,7 @@ $(function () {
     ".burger-menu__content",
     ".action__btn-burgerMenu",
     "active",
-    "inActive"
+    "inActive",
   ); // close popup when clicking on an other place on the Document
   openPopup(".action__btn-menuPopup", ".menu-popup", "active", "inActive"); // Open menu-popup
   closePopup(".menu-popup__close", ".menu-popup", "active", "inActive"); // Close menu-popup
@@ -210,7 +210,7 @@ $(function () {
     ".login-popup-wrapper",
     ".open-login-popup",
     "active",
-    "inActive"
+    "inActive",
   ); // close popup when clicking on an other place on the Document
 
   openPopup(".open-register-popup", "#register-popup", "active", "inActive"); // Open sidenav popup
@@ -219,15 +219,15 @@ $(function () {
     ".login-popup-wrapper",
     ".open-register-popup",
     "active",
-    "inActive"
+    "inActive",
   ); // close popup when clicking on an other place on the Document
   // Open Login Popup
-  $("#go-login").on("click", function () {
+  $("#go-login").on("click", function() {
     $("#register-popup").removeClass("active").addClass("inActive");
     $("#login-popup").removeClass("inActive").addClass("active");
   });
   // Open Register Popup
-  $("#go-register").on("click", function () {
+  $("#go-register").on("click", function() {
     $("#login-popup").removeClass("active").addClass("inActive");
     $("#register-popup").removeClass("inActive").addClass("active");
   });
@@ -237,16 +237,16 @@ $(function () {
     contactResult = $(".contact-result");
   contactForm.validate({
     debug: false,
-    submitHandler: function (contactForm) {
+    submitHandler: function(contactForm) {
       $(contactResult, contactForm).html("Please Wait...");
       $.ajax({
         type: "POST",
         url: "https://formspree.io/f/xvoyeadj",
         data: $(contactForm).serialize(),
-        success: function (msg) {
+        success: function(msg) {
           $(contactResult, contactForm)
             .html(
-              '<div class="alert alert-success" role="alert"><strong>Thank you. We will contact you shortly.</strong></div>'
+              '<div class="alert alert-success" role="alert"><strong>Thank you. We will contact you shortly.</strong></div>',
             )
             .delay(3000)
             .fadeOut(2000);
@@ -329,7 +329,7 @@ $(function () {
 
   /*==========   portfolio Filtering and Sorting  ==========*/
   $("#filtered-items-wrap").mixItUp();
-  $(".portfolio-filter li a").on("click", function (e) {
+  $(".portfolio-filter li a").on("click", function(e) {
     e.preventDefault();
   });
 });
