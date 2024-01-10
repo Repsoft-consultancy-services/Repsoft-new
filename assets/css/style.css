@@ -8746,4 +8746,23 @@ input[type="radio"] {
   .resbtn{
     margin-top: 20% !important;
   }
+  .res{
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .resh{
+    width: 100% !important;
+    margin-top: 5%;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .startup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+
+  }
 }
