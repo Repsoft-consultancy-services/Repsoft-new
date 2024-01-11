@@ -7765,6 +7765,16 @@ input[type="radio"] {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
+.service-item1 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  
+  /* box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.05); */
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
 
 .service-item:not(.service-item-custom) {
   background-color: #ffffff;
