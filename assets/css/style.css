@@ -8691,7 +8691,7 @@ input[type="radio"] {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
-}
+
 
 @media screen and (max-width: 426px) {
   .homescreen-video {
@@ -8751,6 +8751,11 @@ input[type="radio"] {
 
 .logo-dark {
   width: 193px;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media only screen and (max-width: 575.98px) {
   .resbtn{
