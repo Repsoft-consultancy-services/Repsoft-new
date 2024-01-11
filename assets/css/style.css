@@ -8765,4 +8765,10 @@ input[type="radio"] {
     font-size: large;
 
   }
+  .res-card{
+    height: 330px !important;
+  }
+  .res-bg{
+    height: 84% !important;
+  }
 }
