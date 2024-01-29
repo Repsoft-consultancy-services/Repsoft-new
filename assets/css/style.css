@@ -4249,7 +4249,7 @@ input[type="radio"] {
 }
 
 .slider .slide__title {
-  font-size: 75px;
+  font-size: 60px;
   font-weight: 800;
   line-height: 1.1;
   color: #ffffff;
@@ -7765,12 +7765,13 @@ input[type="radio"] {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
+
 .service-item1 {
   position: relative;
   overflow: hidden;
   border-radius: 4px;
   margin-bottom: 30px;
-  
+
   /* box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.05); */
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -8688,22 +8689,20 @@ input[type="radio"] {
 @media screen and (max-width: 1024px) {
   .homescreen-video {
     width: 250% !important;
-    
   }
- 
-  
+
   .fix-mobile-list {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
-
 @media screen and (max-width: 426px) {
   .homescreen-video {
     width: 180% !important;
   }
-  .slider{
+
+  .slider {
     margin-bottom: -15%;
   }
 
@@ -8741,6 +8740,7 @@ input[type="radio"] {
     width: 40vw !important;
   }
 }
+
 @media screen and (max-width: 600px) {
   .homescreen-video {
     width: 150% !important;
@@ -8750,8 +8750,6 @@ input[type="radio"] {
   .slick-next:before {
     display: none !important;
   }
-
-  
 
   .first-section-mob {
     padding-top: 0% !important;
@@ -8786,20 +8784,24 @@ input[type="radio"] {
 .logo-dark {
   width: 193px;
 }
-.center{
+
+.center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 @media only screen and (max-width: 575.98px) {
-  .resbtn{
+  .resbtn {
     margin-top: 20% !important;
   }
-  .res{
+
+  .res {
     flex-direction: column !important;
     align-items: center;
   }
-  .resh{
+
+  .resh {
     width: 100% !important;
     margin-top: 5%;
     align-items: center;
@@ -8807,17 +8809,40 @@ input[type="radio"] {
     align-items: center;
     flex-direction: column;
   }
-  .startup{
+
+  .startup {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: large;
-
   }
-  .res-card{
+
+  .res-card {
     height: 330px !important;
   }
-  .res-bg{
+
+  .res-bg {
     height: 84% !important;
+  }
+}
+
+#myAliceWebChat>div {
+  margin: 0 3rem 3rem 0;
+}
+
+#myAliceWebChat>div>svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 425px) {
+  #myAliceWebChat>div {
+    margin: 0;
+  }
+
+  #myAliceWebChat>div>svg {
+    width: auto;
+    height: auto;
   }
 }
